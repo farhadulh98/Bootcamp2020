@@ -1,22 +1,23 @@
 import React, { Component } from 'react'
 
 const TableBod = props =>
-{
-    
+{    
+   console.log(props)
     const rowss = props.Ca.map((row, index) => {
         return (
           <tr key={index}>
             <td>{row.name}</td>
             <td>{row.job}</td>
+            <button onClick={() => props.rc(index)}>
+              Delete
+            </button>
           </tr>
         )
       })
-    
 
-    return (
-        
-    <tbody>{rowss}
-
+    return (        
+    <tbody>
+      {rowss}
     </tbody>
     )
 }
@@ -35,18 +36,22 @@ const TableHeaderrr = () =>{
 class ATable extends Component 
 {
   
+  
   render()  {
-      // console.log(this.props.Ca)
-      // console.log("Thus")
+      console.log(this.props)
+      console.log("Thus")
       // const { Ca } = this.props
       // console.log({ Ca })
-      const { Ca } = this.props
+
+      const  aa  = this.props.Ca
+      const  rc  = this.props.removeCharacter
+      console.log("Ca")
+      // console.log(Ca)
     return (
       
       <table>
           <TableHeaderrr></TableHeaderrr>
-        {/* <TableBod Caa={Ca}> */}
-        <TableBod Ca={Ca}>
+        <TableBod Ca={aa} rc = {rc}>
           
         </TableBod>
       </table>
