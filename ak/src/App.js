@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ATable from './table'
+import Form from './Form'
 class App extends Component {
   state = {
     characters: [
@@ -38,6 +39,7 @@ class App extends Component {
     return (
       <div className='col-xs-12'>      
         <ATable Ca={characters} removeCharacter={this.removeCharacter}></ATable> 
+        <Form/>
       </div>
     )
   }
