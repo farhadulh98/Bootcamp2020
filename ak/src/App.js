@@ -28,7 +28,7 @@ class App extends Component {
     console.log("From app")
     console.log({characters})
     return (
-      <div className='container'>      
+      <div className='col-xs-12'>      
         <ATable Ca={characters}></ATable> 
       </div>
     )
