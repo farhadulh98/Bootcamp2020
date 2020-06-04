@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import ATable from './table'
 class App extends Component {
   render() {
+    
+    console.log("From app")
+
+
     const characters = [
       {
         name: 'Charlie',
@@ -20,10 +24,12 @@ class App extends Component {
         job: 'Bartender',
       },
     ]
+    
+    console.log("From app")
+    console.log({characters})
     return (
-      <div className='container'>
-      
-        <ATable CaaD={characters}></ATable> 
+      <div className='container'>      
+        <ATable Ca={characters}></ATable> 
       </div>
     )
   }

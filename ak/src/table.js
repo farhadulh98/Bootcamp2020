@@ -1,17 +1,9 @@
 import React, { Component } from 'react'
-const TableHeaderrr = () =>{
-    return (
-    <thead>
-        <tr>
-          <th>Name</th>
-          <th>Job</th>
-        </tr>
-      </thead>
-      )
-}
+
 const TableBod = props =>
 {
-    const rowss = props.CaaD.map((row, index) => {
+    
+    const rowss = props.Ca.map((row, index) => {
         return (
           <tr key={index}>
             <td>{row.name}</td>
@@ -24,18 +16,37 @@ const TableBod = props =>
     return (
         
     <tbody>{rowss}
+
     </tbody>
     )
 }
+
+const TableHeaderrr = () =>{
+    return (
+    <thead>
+        <tr>
+          <th>Name</th>
+          <th>Job</th>
+        </tr>
+      </thead>
+      )
+}
+
 class ATable extends Component 
 {
-    
+  
   render()  {
-      const { CaaD } = this.props
+      // console.log(this.props.Ca)
+      // console.log("Thus")
+      // const { Ca } = this.props
+      // console.log({ Ca })
+      const { Ca } = this.props
     return (
+      
       <table>
           <TableHeaderrr></TableHeaderrr>
-        <TableBod CaaD={CaaD}>
+        {/* <TableBod Caa={Ca}> */}
+        <TableBod Ca={Ca}>
           
         </TableBod>
       </table>
